@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeSafeJsonConversion", "src\TypeSafeJsonConversion.csproj", "{897EFF5B-6001-4B49-A865-E5FB69880621}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeSafeJsonConversion.Tests", "tests\TypeSafeJsonConversion.Tests.csproj", "{A7DE7203-188E-4F7E-AFC9-BD01FD9C97B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{14A41EE9-CC52-45A8-B34F-751E43B54C8E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{897EFF5B-6001-4B49-A865-E5FB69880621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897EFF5B-6001-4B49-A865-E5FB69880621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897EFF5B-6001-4B49-A865-E5FB69880621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897EFF5B-6001-4B49-A865-E5FB69880621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DE7203-188E-4F7E-AFC9-BD01FD9C97B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DE7203-188E-4F7E-AFC9-BD01FD9C97B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DE7203-188E-4F7E-AFC9-BD01FD9C97B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DE7203-188E-4F7E-AFC9-BD01FD9C97B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {018021D5-A730-4A94-94C2-21AAA99C7B15}
+	EndGlobalSection
+EndGlobal
