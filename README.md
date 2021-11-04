@@ -10,7 +10,7 @@ Note that we were using C# 8, some notes explain how we might want to handle it 
 
 > Note: If you are on C# 9, consider using [StronglyTypedId](https://github.com/andrewlock/StronglyTypedId), which relies on source generators to generate types for your identifiers (primitives). From C# 10 onwards, you can consider using `record struct` with a custom serializer if you do not want to rely on a library.
 
-Primitive obsession is a problem that is well-known and which has been thoroughly discussed already. By introducing thin wrapper types as your primitives, you can solve some of the issues that primitive obsession brings, such as accidentally changing the parameter order or a decreased expressiveness of the code.
+We will not go into great depth discussing primitive obsession here. For the purpose of this sample, let us assume that we solve primitive obsession by introducing thin wrapper types as our primitives. This solves some of the issues that come with primitive obsession, such as accidentally changing the parameter order or a decreased expressiveness of the code.
 
 Throughout this sample code we are going to use a "calculation" that needs to be executed to illustrate how we can use the sample code to improve on type safety. A calculation represents a unit of work that is very CPU intensive. Each calculation has an identifier, among other properties, such as its input formula. We will subsequently call the identifier of the calculation `CalculationId`. This identifier might be based on a free-form `string` or a `Guid`, but in our case we choose an `int` to be its underlying type. Instead of relying on one of the built-in types directly, we create a thin wrapper-type for the `CalculationId`.
 
