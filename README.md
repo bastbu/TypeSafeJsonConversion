@@ -22,7 +22,7 @@ partial struct CalculationId
 }
 ```
 
-We should use the type for the `CalculationId` consistently within the boundaries of our system, and only if it leaves the application boundaries do we access the `CalculationId.Value`. While this works well for our use case, it comes with a catch: when serializing data containing a `CalculationId`, JSON.NET and `System.Text.Json` cannot handle these types out of the box as we want them to. Deserializing will, per default, nest the `CalculationId.Value` property, i.e. the serialized version of a `CalculationId` would be `{"Value":"1"}` in place of `1`.
+We should use the type for the `CalculationId` consistently within the boundaries of our system, and only if it leaves the application boundaries do we access the `CalculationId.Value`. While this works well for our use case, it comes with a catch: when serializing data containing a `CalculationId`, JSON.NET and `System.Text.Json` cannot handle these types out of the box as we want them to. Deserializing will, per default, nest the `CalculationId.Value` property, i.e. the serialized version of a `CalculationId` would be `{"Value":1}` in place of `1`.
 
 This is why we create a `JsonStringConverter` that helps us (de-)serializing these wrapper types without an additional level of nesting. Proper deserialization of the `CalculationId` then becomes a matter of defining a `Parser`, including its inverse, `ToString`, for the `CalculationId`. Supporting JSON conversion for our `CalculationId` means writing the following code:
 
